@@ -18,16 +18,16 @@ def loadData(fileName):
 
     if fileName == '':
         treeData.Insert('','1','No file selected...', values=[])
-        return treeData
+        return treeData, 0
 
     try:
         file = open(fileName, 'rb')
         pdf = PdfFileReader(file)
         fields = pdf.getFields()
     except Exception as error:
-        treeData.Insert('','1','Error loading file...', values=[])
+        treeData.Insert('','1',f"Error loading file {fileName}...", values=[])
         treeData.Insert('','1',f"{error}", values=[])
-        return treeData
+        return treeData, 0
 
     #Reset these counters to 0 before we start processing data.
     global level; level = 0
