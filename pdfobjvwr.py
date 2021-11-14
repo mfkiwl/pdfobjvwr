@@ -1,3 +1,10 @@
+"""
+Copyright (C) Shelby Tucker 2021
+
+This file is part of 'Droid Assistant Bot', which is released under the MIT license.
+Please see the license file that was included with this software.
+"""
+
 import PySimpleGUI as sg
 from PyPDF2 import PdfFileReader
 from PyPDF2.generic import IndirectObject
